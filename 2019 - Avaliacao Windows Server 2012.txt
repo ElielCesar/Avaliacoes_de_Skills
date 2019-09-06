@@ -1,0 +1,64 @@
+﻿Bem vindo prezado Analista.
+
+Sua primeira missao no campus deve ser instalar o Windows Server conforme os requisitos abaixo.
+
+Avaliação de aprendizado windows server 2012 r2
+
+- instale o windows server 2012 r2 ( ad-principal, ad-backup_arquivos)
+- configure as placas de rede de ambos os servidores
+- instale o adicionais para convidados e a experiencia desktop em ambos
+- configure todos para estarem na rede interna intnet
+-tamanho de disco de ambos os servidores de 35 GB cada Um.
+- para essa atividade ambos os firewalls dos servidores podem ser desativados.
+
+------------- NO AD-PRINCIPAL
+
+-instale o active directory nivel da floresta para 2008 r2
+-crie as seguintes unidades organizacionais: 
+-ariquemes e dentro de ariquemes: computadores, departamentos, grupos, usuarios
+
+dentro da OU usuarios crie: administrativos, alunos, docentes, estagiarios, sistemas, temporarios, suspensos.
+dentro da OU grupos: cbib.ariquemes, cgab.ariquemes, cofin.ariquemes, dplad.ariquemes, cgti.ariquemes, servidores.ariquemes
+crie pelo menos 3 usuarios para cada grupo.
+
+-crie as seguintes gpos:
+papel de parede padrão para todos os usuários.
+a cgti nao precisa ter esse papel de parede, logo essa gpo nao pode ser aplicada a ela.
+	
+
+-os usuários da cofin precisam de perfis moveis nos pcs com windows 7
+-os usuários para estagiários tem horário de logon permitido de segunda a sexta das 08 as 17:00
+-os usuários da cofin ao fazerem login precisam que a calculadora abra automaticamente para agilizar o serviço
+-os usurios da cgti precisam ter acesso ao servidor via area de trabalho remota
+-instale o gerenciador de backup nesse servidor e faça o backup pela rede no servidor ad-backup-arquivos com uma imagem de sistema completa.
+
+- crie no servidor uma zona direta para site.ifro.local que aponte para o backup-arquivos
+- crie no servidor uma zona direta para ftp.colorado apontando para o ip do servidor backup-arquivos
+- verifique se o servidor consegue responder as requisições via nslookup para site.ifro.local, ftp.colorado.ifro.local
+
+
+******* NO SERVIDOR AD-BACKUP-ARQUIVOS**********
+
+-este servidor deve estar no domínio
+-este servidor deve ser um domain controler secundário para caso o outro pare de funcionar e sua instalação deve ser feita via IFM.
+- desative a placa do ad-master e verifique se os usuários conseguem fazer login no ad-backup-arquivos
+
+-crie na raiz do disco C uma pasta chamada PASTA DA REDE e dentro dela uma subpasta compartilhada para cada grupo somente o usuário daquele setor pode ter acesso a sua pasta
+a pasta de arquivos compartilhados ( PASTA DA REDE ) deve ter um atalho na área de trabalho de cada usuário.
+
+-o cgti pode ter acesso a tudo em todas as pastas
+
+-os usuários da cgab precisam ter sua pasta compartilhada na rede como pasta base pelo Explorer pois são leigos
+
+-o chefe do dplad varlei.gomes também pode ter acesso em todas as pastas da cofin e da propria dplad
+-é proibido subir arquivos de vídeo e musicas para este servidor de arquivos exceto para o cgab que precisa salvar musicas e videos.
+- Limite para que cada departamento só possa ter 300MB como um todo na pasta do departamento pelo gerenciador de cotas do servidor.
+
+- A pasta da CGAB pode ter 500MB mas cada usuário que tem acesso nessa pasta só pode armazenar no máximo 250MB de arquivos.
+- este servidor deve ter o serviço de dhcp instalado fornecendo uma rede /24 e deve ter os 10 primeiros endereços reservados
+- instale o ftp server com autenticação no ad e acesso via web, nesse momento vc pode desativar o firewall do windows para isso, obs use o dominio ftp.colorado criado no servidor Master anteriormente para nomear o site FTP.
+
+-por ultimo apague o servidor ad-principal do virtualizador e restaure o mesmo pelo backup criado anteriormente.
+-eleve o nível do domínio para server 2012.
+
+Atenciosamente.
