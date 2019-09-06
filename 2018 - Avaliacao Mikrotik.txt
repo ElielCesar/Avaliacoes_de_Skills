@@ -1,0 +1,61 @@
+﻿1 - o que é mk ? e qual a diferença de routeros para routerboard ? 
+
+2 - qual é o site oficial da mk ? 
+
+3 - instale o mk em uma maquina virtual e ative a licença. 
+
+4 - quais são os niveis de licenciamento da mk ?
+
+5 - pelo terminal mostre informaçoes das placas de rede do mk. 
+
+6 - preciso de um endereço ip para acessar o mk ? e quais são os 4 protocolos que são
+necessarios para encontrar um routeros na rede ? 
+
+7 - no seu mk adicione 3 interfaces de rede.
+-wan
+-lan administrativa
+-lan academica
+
+8 - ative o dhcp server e client para cada uma das interfaces ( crie o pool a sua escolha). 
+
+9 - verifique se o host cliente pegou dhcp e amare o mac ao endereço.
+
+10 - mude a senha do admin.
+
+11 - explique a aba quick set.
+
+12 - o que é a guia caps man ?
+
+13 - adicione 3 endereços DNS ao mk.
+
+14 - mostre onde fica o pool de endereços do dhcp.
+
+15 - mostre quais pacotes estão instalados no seu mk.
+
+16 - explique as rotas no mk.
+
+17 - desabilite os serviços de ftp, telnet e mude a porta web para 8044.
+
+18 - acesse a interface web do mk.
+
+19 - ative o nat para seus clientes navegarem na internet.
+
+20 - crie uma regra de bloqueio para o facebook de maneira simples.
+
+21 - mostre onde inserir a licença do mk.
+
+22 - mostre onde resetar as configuraçoes do mk para default.
+
+23 - faça um backup do sistema salve no seu pc.
+
+24 - reset o mk para config default e depois restaure o backup criado.
+
+25 - ping algum endereço pelo mk.
+
+26 - mostre quais os recursos mais consumidos pelo mk.
+
+27 - altere a porta padrao do winbox.
+
+29 - explique como funciona o safe mode. 
+
+30 - mostre como fazer controle de banda através das queues.

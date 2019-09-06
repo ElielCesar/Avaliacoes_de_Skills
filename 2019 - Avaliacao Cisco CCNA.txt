@@ -1,0 +1,337 @@
+﻿avaliação cisco ccent e ccna.
+
+Bem vindo Prezado, sua segunda atividade como analista deve ser projetar a rede do campus Colorado no packet tracer!!
+
+Segue abaixo as instruções para criação da topologia, não precisa seguir exatamente essa ordem desde que os requisitos sejam cumpridos.
+
+*** a rede do campus deve ser segmentada em acadêmica cabeada, administrativa cabeada,  administrativa+academica wifi ( essa rede wifi não precisa acessar as demais ( dmz ) pois o packet tracer limita os recursos dessa controladora ) em todos os APs as 2 SSIDs devem aparecer.
+
+0 - explique o que é um cabo console e o que fazer caso meu notebook não tenha essa porta.
+1 - conecte todos os equipamentos e explique o motivo de usar cada cabo para realizar a conexão.
+2 - renomeie todos os equipamentos.
+3 - coloque uma senha em todos os equipamentos tanto uma senha para acesso a porta console quanto uma senha para entrar no modo privilegiado # e também uma senha para acesso nas portas virtuais ''vty'' de 0 a 15. Todas podem ter a mesma senha, só não deixe o acesso liberado irrestritamente.
+
+OBS: esses passwords da porta console e das portas virtuais vão ficar salvos em texto puro dentro do equipamento se vc rodar o show running-config para visualizar, então use a encriptação de password para encripta-los para que os curiosos não vejam.
+
+4- complete as características padrão de fabrica de um switch da cisco
+- cdp = 
+- swithing mode = 
+- velocidade das interfaces = 
+- mode das interfaces = 
+- vlan nativa = 
+- spanning tree = 
+- senha = 
+- vtp mode = 
+- dominio vtp = 
+
+5 - cite as 3 maneiras de salvar as configurações da memoria ram na memoria nvram.
+6 - explique a diferenca entre um cascateamento e um stack de switchs.
+7 - o que eh a tabela MIB que os Switchs tem ?
+8 - mostre o status das interfaces resumidamente ( brief ).
+9 - coloque um endereço ip nas interfaces dos roteadores para que possam se comunicar e crie um nat para que os hosts da rede interna possam pingar o roteador externo também.
+10 - coloque uma descrição nas interfaces dos roteadores e switchs dos labs mostrando qual porta se liga a qual equipamento.
+
+
+11 - mostre as configurações detalhadas de um dos roteadores e um dos switchs.
+12 - coloque um banner em cada switch e roteador da topologia com um aviso e o nome do responsável pelo equipamento.
+13 - mostre qual o nível de privilegio do usuário que vc esta usando.
+14 - coloque um servidor de ntp na internet passando por um roteador ( pode ser o mesmo web server se ja existir ) e coloque seus switchs e roteadores para pegar a hora desse servidor, não se preocupe se a data não estiver exata, mas o horário tem que ficar igual em todos os equipamentos.
+15 - crie uma vlan 10 chamada VLAN-ADMINISTRATIVA e uma vlan 20 chamada VLAN-ACADEMICA e mais uma vlan 30 Chamada VLAN-TEMPORARIA em todos os switchs dos laboratórios, na VLAN-TEMPORARIA NAO PRECISA ADICIONAR PORTAS OU HOSTS
+
+
+16 - depois que estiver funcionando as conexões acima use os comandos para mostrar quais interfaces são trunks e quais as vlans estão permitidas nessa interface.
+17 - o que acontece se vc fizer um trunk entre 2 switchs mas no switch-01 a vlan nativa for 10 e no switch-02 a vlan nativa for a 1 ?
+18 - explique o que significa o holdtime na tabela de neighbors cdp dos equipamentos cisco.
+19 - quais os 4 tipos de memoria que um equipamento da cisco tem ?
+20 - ao ligar um dos equipamentos vc verificou que o console esta desse jeito: rommon>     o que isso significa ?
+
+21 - salve todas as configurações dos equipamentos com reload.
+22 - qual a diferença entre uma porta em modo access, trunk, dynamic, uplink do switch ?
+23 - qual eh o problema em deixar as portas do switch em modo dynamic para o usuário final ?
+24 - mostre as informações da tabela neighbors dos 2 switchs cores e do roteador, informando qual a porta local e a porta remota que os dispositivos estão conectados.
+25 - apague a vlan 30 VLAN-TEMPORARIA em todos os switchs! ela não sera mais usada.
+
+
+26 - configure o canal e o SSID nos roteadores da topologia, use a controladora Wireless 2504 para realizar essas atividades.
+27- mostre o modo do vtp de alguns switchs da rede e se existir um vtp server qual eh o endereço ip do mesmo.
+28 - conecte 2 dispositivo em cada AP ( se possível ) usando a SSID correta.
+29 - mostre como habilitar o debug para ip packets
+30 - explique por que nao se deve habilitar o debug all em um switch core da rede ?
+
+
+31 - desabilite o debug no equipamento em que vc habilitou.
+32 - desabilite o cdp nas interfaces que vão para o usuário final ( se já não estiverem ), eles não devem ver esses pacotes.
+33 - caso vc precise trabalhar com equipamentos de outros fabricantes que não tenham o cdp, qual o protocolo que deve ser usado ? mostre como habilita-lo nos switchs e no roteador. 
+34 - existe uma coisa chamada tempo de convergência do spannig tree, esse tempo eh de quantos segundos e de que cor fica a porta do switch enquanto esse tempo de convergência esta ocorrendo ?
+35 - use a simulação do packet tracer e mostre como funciona o ping entre o mesmo segmento no switch e o ping entre dispositivos na mesma vlan em switchs diferentes.
+
+
+36 - qual eh a utilidade de um servidor radius ou tacacs dentro de uma rede ?
+37 - qual eh o protocolo de rede que vai enviar informações do seus routers e switchs para um servidor de monitoramento da rede ? 
+38 - vc pegou um router ou um switch na rede e quando vc digitou o comando enable para entrar no modo de configuração apareceu a solicitação de um ''username:'' e logo depois um ''password:'' o que significa ?
+39 - Abra uma outra aba e crie uma pequena topologia com apenas um switch com 2 vlans e um roteador e mostre como fazer um router on the stick.
+40 - explique o que é etherchannel e faça um desse em 2 switchs numa nova topologia.
+
+41 - quais os 3 requisitos que obrigatoriamente devem ser iguais nos switchs onde vc quer fazer um etherchannel ?
+42 - o que acontece se vc fizer um etherchannel e as portas estiverem com a largura de banda diferente ? ex: switch-01 porta 100 Mbps , switch-02-1000 Mbps 
+43 - crie 3 usuários locais chamados user1, user2, user3, com o password 35435 e coloque as linhas vty de 0 - 15 para fazerem login local.
+44 - mostre qual dos switchs da rede eh o switch root do spanning-tree.
+45 - em uma rede com redundância de conexões o protocolo spanning tree escolhe um dos switchs para ser o "root" quais os 2 critérios para essa escolha ?
+
+46 - uma vez que o switch root foi definido e existem 2 conexões redundantes para chegar nele, como ele vai escolher qual a porta redundante ele vai desabilitar ?
+47 - o que eh uma hierarquia de switchs recomendada pela cisco ?
+48 - o que significa o termo Backplane quando se fala de switchs ?
+49 - alem de tabela MAC como eh conhecida essa tabela de endereços e portas ?
+50 - tratando de fibra optica qual sao os conectores de fibra mais usados hoje em dia em redes LAN ? e o segundo mais usado ?
+51 - como chama-se aquele conector de fibra optica que alguns switchs tem somente o buraco pra vc encaixar e sao quadradinhos ?
+
+52 - quanto tempo um endereco mac fica na tabela arp do switch antes de ser removido ?
+53 - você executou o comando show mac address table e viu que uma determinada porta do switch tinha vários endereços mac associados a ela, o que isso significa ?
+54 - o que eh a condicao de "errdisable" em uma porta do switch e o que fazer quando isso acontecer ?
+55 - de quanto em quanto tempo os dispositivos enviam pacotes CDP na rede ?
+56 - Como vc deve fazer caso precise ligar um switch que tenha entrada para fibra óptica com um que so tem portas Ethernet ?
+57 - o que eh o UDLD quando se fala de switchs que tem fibra ?
+
+58 - como fazer para verificar as configuracoes detalhadas de uma interface do switch usando switchport ?
+59 - a cisco recomenda que nao sejam criadas vlans de fim a fim, o que isso significa ?
+60 - vc criou uma vlan no switch e atribuiu 5 portas para essa vlan, apos algum tempo voce resolve apagar essa vlan e percebe que uma parte da rede parou! o que aconteceu ?
+61 - qual o range normal de vlans de um switch cisco que vc pode criar, deletar, modificar, etc ?
+62 - qual o range de vlans reservadas de um switch cisco ?
+63 - crie um domínio vtp na sua infra e mostre como as vlans são replicadas para todos os switchs.
+64 - crie um port channel ( link agregation ) entre 2 switchs usando pagp e entre outros 2 switchs usando lacp.
+65 - porque eu deveria configurar meu switch core ou meu switch de distribuição para ser meu switch root do spanning tree ? e como isso deve ser feito ?
+
+66- quais sao as 3 funcoes ( port roles ) que uma porta pode ter no spanning tree ?
+67  - escolha um dos switchs core ou distribuição da sua rede e force as configurações para que ele seja o switch root da rede.
+68 - qual a diferenca entre spanning tree ( cspt ) e o peer vlan spanning tree ( pvspt+ ) ?
+69 - por que eh interressante do ponto de vista da engenharia de trafego habilitar o recurso portfast e o bpdu guard nas portas de acesso do switch ? apos explicar faca isso em todos os switchs de acesso da sua topologia.
+70 - habilite o recurso dhcp snooping na sua topologia em todos os switchs.
+71 - os switchs cisco tem um recurso chamado storm-control, para que serve esse recurso? habilite o mesmo nos switchs da sua topologia quando o nível de broadcast da interface chegar em 25% da banda total.
+
+
+
+
+
+
+
+Atenciosamente.
+
+
+---------------------------------
+
+0 - explique o que é um cabo console e o que fazer caso meu notebook não tenha essa porta.
+R = é o cabo que faz a ligaçao entre seu notebook e o switch, uma das portas é db9 e a outra é rj45
+
+4- complete as características padrão de fabrica de um switch da cisco
+- cdp = habilitado em todas as portas
+- swithing mode = store and fowarding
+- velocidade das interfaces = autonegociation
+- mode das interfaces = dynamic
+- vlan nativa = 1
+- spanning tree = enable
+- senha = nenhuma
+- vtp mode = server
+- dominio vtp = nunhum
+
+5 - cite as 3 maneiras de salvar as configurações da memoria ram na memoria nvram.
+R = copy running-config startup-config, wr, reload
+
+6 - explique a diferenca entre um cascateamento e um stack de switchs.
+R = Cascateamento é a ligação entre 2 switchs pelas portas ethernet gigabit ou megabit, já o stack é feito utilizando um cabo especial de cada fabricante.
+
+7 - o que eh a tabela MIB que os Switchs tem ?
+R = MIB = Management information base (MIB), em português base de informações de gerenciamento, é um banco de dados usado para gerenciamento, essa mini base de dados armazena varias informações que podem ser recuperadas via o protocolo SNMP fornecendo dados como uso da memoria, processamento, trafego, etc.
+
+
+8 - mostre o status das interfaces resumidamente ( brief ).
+9 - coloque um endereço ip nas interfaces dos roteadores para que possam se comunicar e crie um nat para que os hosts da rede interna possam pingar o roteador externo também.
+10 - coloque uma descrição nas interfaces dos roteadores e switchs dos labs mostrando qual porta se liga a qual equipamento.
+
+
+11 - mostre as configurações detalhadas de um dos roteadores e um dos switchs.
+R = mostre a running-config
+
+13 - mostre qual o nível de privilegio do usuário que vc esta usando.
+R = show privilege
+
+17 - o que acontece se vc fizer um trunk entre 2 switchs mas no switch-01 a vlan nativa for 10 e no switch-02 a vlan nativa for a 1 ?
+R = as maquinas não vão se comunicar.
+
+18 - explique o que significa o holdtime na tabela de neighbors cdp dos equipamentos cisco.
+R =  é o tempo em segundos que um dispositivo tem para dar sinal de vida antes que seja retirado da tabela de vizinhos.
+
+19 - quais os 4 tipos de memoria que um equipamento da cisco tem ?
+R = rom, ram, nvram, flash
+
+20 - ao ligar um dos equipamentos vc verificou que o console esta desse jeito: rommon>     o que isso significa ?
+R= que o dispositivo perdeu sua IOS ou ela nao foi encontrada em nenhuma das memorias e que vc vai ter que usar um servidor de tftp para baixar uma nova IOS para o dispositivo.
+
+22 - qual a diferença entre uma porta em modo access, trunk, dynamic, uplink do switch ?
+
+
+23 - qual eh o problema em deixar as portas do switch em modo dynamic para o usuário final ?
+
+27- mostre o modo do vtp de alguns switchs da rede e se existir um vtp server qual eh o endereço ip do mesmo.
+
+29 - mostre como habilitar o debug para ip packets
+
+
+30 - explique por que nao se deve habilitar o debug all em um switch core da rede ?
+R = devido a gigantesca quantidade de bilhoes de pacotes sendo debugados o switch vai travar durante o debug e parar todo o segmento de rede.
+
+33 - caso vc precise trabalhar com equipamentos de outros fabricantes que não tenham o cdp, qual o protocolo que deve ser usado ? mostre como habilita-lo nos switchs e no roteador. 
+R = LLDP
+
+34 - existe uma coisa chamada tempo de convergência do spannig tree, esse tempo eh de quantos segundos e de que cor fica a porta do switch enquanto esse tempo de convergência esta ocorrendo ?
+R = de até 50 segundos, a porta fica laranja durante esse tempo.
+
+36 - qual eh a utilidade de um servidor radius ou tacacs dentro de uma rede ?
+R = autenticação e gerenciamento de permissões centralizado.
+
+
+37 - qual eh o protocolo de rede que vai enviar informações do seus routers e switchs para um servidor de monitoramento da rede ? 
+R = SNMP
+
+38 - vc pegou um router ou um switch na rede e quando vc digitou o comando enable para entrar no modo de configuração apareceu a solicitação de um ''username:'' e logo depois um ''password:'' o que significa ?
+R = que ele esta configurado para permitir login somente através de um servidor Radius ou TACACS.
+
+
+40 - explique o que é etherchannel e faça um desse em 2 switchs numa nova topologia.
+R = é a agregação de 2 interfaces para criar uma redundância e melhor utilização do trafego.
+
+entre nas interfaces de uplink 
+
+Switch 01
+interface range gig0/1 - gig0/2
+channel-group 3 mode active
+
+Switch 02
+interface range gig0/1 - gig0/2
+channel-group 3 mode passive
+
+pronto esta feito seu etherchannel
+
+
+41 - quais os 3 requisitos que obrigatoriamente devem ser iguais nos switchs onde vc quer fazer um etherchannel ?
+velocidade das portas, encapsulamento ( PAgP, LACP ), modo duplex
+
+42 - o que acontece se vc fizer um etherchannel e as portas estiverem com a largura de banda diferente ? ex: switch-01 porta 100 Mbps , switch-02-1000 Mbps 
+R = o Etherchannel não vai fechar.
+
+
+44 - mostre qual dos switchs da rede eh o switch root do spanning-tree.
+R = show spanning-tree sumary ( vai estar com defalt em mode ), ou show spanning-tree detais ( vai ter uma frase, nos somos root, no switch raiz )
+
+45 - em uma rede com redundância de conexões o protocolo spanning tree escolhe um dos switchs para ser o "root" quais os 2 critérios para essa escolha ?
+R = primeiro o protocolo verifica qual switch tem a MENOR prioridade, se todos forem iguais ele escolhe o que tem o menor endereço MAC
+
+46 - uma vez que o switch root foi definido e existem 2 conexões redundantes para chegar nele, como ele vai escolher qual a porta redundante ele vai desabilitar ?
+R =  Ele vai escolher a porta onde o switch tem o maior numero de prioridade, se forem iguais ele vai escolher o switch que tem o maior endereço MAC para que este caminho seja bloqueado, lembrando que para o spanning tree quanto maior o numero de prioridade pior pois ele escolhe sempre o menor numero de prioridade.
+
+47 - o que eh uma hierarquia de switchs recomendada pela cisco ?
+R = hierarquia de switchs nada mais eh do que a forma de estruturar a sua rede em camada 2, uma hierarquia de switch recomendada pela cisco deve ser composta por switchs de acesso, de distribuição e por ultimo os switchs core com maior capacidade de trafego.
+
+48 - o que significa o termo Backplane quando se fala de switchs ?
+R = Backplane eh a quantidade de Gbps que um switch consegue trabalhar internamente, ou seja somando o trafego total de todas as portas quantos Gbps ele consegue manipular sem travar ou descartar pacotes.
+
+49 - alem de tabela MAC como eh conhecida essa tabela de endereços e portas ?
+R = tambem eh conhecida como CAM table.
+
+50 - tratando de fibra optica qual sao os conectores de fibra mais usados hoje em dia em redes LAN ? e o segundo mais usado ?
+R = em primeiro lugar o mais usado eh o conector LC, o segundo mais usado eh o conector SC ( este ja caindo em desuso também )
+
+- 51 - como chama-se aquele conector de fibra optica que alguns switchs tem somente o buraco pra vc encaixar e sao quadradinhos ?
+R = chamam-se modulos de SFP que sao feitos para utilizar cordoes de fibra em switchs.
+
+52 - quanto tempo um endereço mac fica na tabela arp do switch antes de ser removido ?
+r = 300 segundos ou 5 minutos
+
+53 - você executou o comando show mac address table e viu que uma determinada porta do switch tinha vários endereços mac associados a ela, o que isso significa ?
+R = significa que conectado naquela porta deve ter outro switch ou mesmo um roteador wifi, por isso quando os dispositivos usam aquela porta para se comunicar o switch acima aprende esses enderecos mac e os associa a mesma porta.
+
+54 - o que eh a condicao de "errdisable" em uma porta do switch e o que fazer quando isso acontecer ?
+R = errdisable eh uma situacao onde ocorre algum erro de camada fisica ou de camada 2 em um switch, pode ser por diversos motivos, o que vc como adm deve fazer eh verificar o que levou a esse erro e entrar na console/porta do switch e dar o comando no shut para subir a porta manualmente.
+
+55 - de quanto em quanto tempo os dispositivos enviam pacotes CDP na rede ?
+R = a cade 60 segundos.
+
+56 - Como vc deve fazer caso precise ligar um switch que tenha entrada para fibra óptica com um que so tem portas Ethernet ?
+R = para essas situacoes voce vai comprar 2 dispositivos de midia que fazem a conversao ethernet para fibra, em cada porta da fibra deve ter um conversor desses, dessa forma vc pode usar fibra óptica mesmo que seu switch não tenha portas para tal.
+
+57 - o que eh o UDLD quando se fala de switchs que tem fibra ?
+R = UDLD eh um protocolo que fica basicamente monitorando o estado da conexão entre links de fibra optica, esse protocolo funciona parecido com o ping pois envia uma requisição e aguarda uma resposta, caso a mesma nao chegue o link eh considerado Down.
+
+58 - como fazer para verificar as configuracoes detalhadas de uma interface do switch usando switchport ?
+R = show interfaces fastEthernet0/1 switchport
+
+59 - a cisco recomenda que não sejam criadas vlans de fim a fim, o que isso significa ?
+vlans fim a fim são vlans que passam por todos os switchs de distribuição e as vezes passam ate mesmo pelo switch core da rede, a cisco recomenda que não sejam usadas pois caso venha ocorrer algum problema vc terá que passar por vários switchs para conferir qual deles esta com problema e também caso tenha algum loop de camada 2 ou broadcast storm ela vai afetar todos os switchs por onde essa vlan passa incluindo o core! só use se não tiver outra alternativa.
+
+60 - vc criou uma vlan no switch e atribuiu 5 portas para essa vlan, apos algum tempo voce resolve apagar essa vlan e percebe que uma parte da rede parou! o que aconteceu ?
+R = quando vc associa portas a uma vlan e depois apaga essa vlan estas portas que vc adicionou vão ficar como inativas no switch!! ou seja elas não vão voltar sozinhas para a vlan principal, elas vao ficar inativas ate que vc as coloque em outra vlan!
+
+
+61 - qual o range normal de vlans de um switch cisco que vc pode criar, deletar, modificar, etc ?
+R = de 2 - 1001
+
+62 - qual o range de vlans reservadas de um switch cisco ?
+R = 1002 - 1005
+
+64 - crie um port channel ( link agregation ) entre 2 switchs usando pagp e entre outros 2 switchs usando lacp.
+pagp
+
+interface range gig0/1 - gig0/2
+channel-protocol pagp
+channel-group 1 mode auto
+-------------------
+interface range gig0/1 - gig0/2
+channel-protocol pagp
+channel-group 1 mode desirable
+
+lacp
+interface range gig0/1 - gig0/2
+channel-protocol lacp
+channel-group 1 mode active
+--------------------
+interface range gig0/1 - gig0/2
+channel-protocol pagp
+channel-group 1 mode active
+
+65 - porque eu deveria configurar meu switch core ou meu switch de distribuição para ser meu switch root do spanning tree ? e como isso deve ser feito ?
+R = vc deve configurar os seu switch core da rede ou caso não exista um dos switchs de distribuição deve ser o root da rede por questões de melhor caminho do trafego e melhor vazão da rede, por exemplo caso vc tenha 5 switchs sendo 1 core, 2 distribuição e 2 de acesso e um dos switchs de acesso for eleito o root da rede ele vai desabilitar um dos caminhos para os switchs de distribuição e mesmo para o core, dessa forma ao invés do seu trafego fluir de - acesso -> distribuição -> core , ele vai fluir de acesso -> acesso novamente -> distribuição e core. Como switchs de acesso tem uma menor capacidade de trafego sua rede vai travar sem que vc perceba onde esta o gargalho!! por isso sempre coloque seu switch core ou distribuição para ser o root spt da rede, para fazer isso eh so baixar a priority do switch core pois para o spanning tree quanto menor a priority melhor.
+
+66- quais são as 3 funcoes ( port roles ) que uma porta pode ter no spanning tree ?
+R = root port, designated port, blocking port
+
+68 - qual a diferenca entre spanning tree ( cspt ) e o peer vlan spanning tree ( pvspt+ ) ?
+R = a diferença eh que o spannig tree comum o cspt somente trabalha com um switch root para todas as vlans da rede, ja com o peer vlan spanning tree vc consegue eleger um switch root para cada vlan!!! ou seja se vc tiver 3 vlans vc consegue eleger 3 switchs root nessa mesma topologia... na pratica não eh muito usado.
+
+
+69 - por que eh interessante do ponto de vista da engenharia de trafego habilitar o recurso portfast e o bpdu guard nas portas de acesso do switch ? apos explicar faca isso em todos os switchs de acesso da sua topologia.
+R = Quando vc habilita o portfast nas portas de acesso aos dispositivos finais o spanning tree para de trabalhar naquela porta, dessa forma ao conectar um host nela nao sera preciso esperar de 30 - 50 segundos ate que o spt faca toda a verificação de loop!!! quando vc habilita o bpdu guar nas portas de acesso vc cria uma camada a mais de segurança pois caso o usuário coloque um switch na rede sem vc saber este switch nao vai conseguir funcionar nas portas de acesso.
+
+
+71 - os switchs cisco tem um recurso chamado storm-control, para que serve esse recurso? habilite o mesmo nos switchs da sua topologia quando o nível de broadcast da interface chegar em 25% da banda total.
+R = O recurso de storm-control eh muito util quando um dispositivo esta gerando uma alta quantidade de pacotes broadcast na rede para diminuir a largura de banda ou mesmo por algum tipo de infecção maliciosa, com esse recurso vc pode especificar que se mais quem X% do trafego da porta for de broadcast o switch deve dropar esses pacotes.
+como fazer entre nas interfaces e digite storm-control broadcast level 0 - 100 ( por padrao 20 % para dispositivos finais e uns 50% para sistemas de cftv )
+
+
+
+9 - coloque um endereço ip nas interfaces dos roteadores para que possam se comunicar e crie um nat para que os hosts da rede interna possam pingar o roteador externo também.
+
+gig0/0 = interface externa para wan
+gig0/1 = interface local administrativa
+gig0/2 = interface local academica
+
+1- no roteador crie as access-list
+access-list 1 permit 10.38.1.0 0.0.0.255 
+access-list 2 permit 192.168.1.0 0.0.0.255 
+
+2 - no roteador defina a funcao nat das interfaces
+gig0/0 = ip nat outside
+gig0/1 = ip nat inside
+gig0/2 = ip nat inside
+
+3- defina as regras de saida
+(config)#ip nat inside source list 1 interface gigabitEthernet0/0 overload 
+(config)#ip nat inside source list 2 interface gigabitEthernet0/0 overload

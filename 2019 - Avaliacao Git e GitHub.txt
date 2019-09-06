@@ -1,0 +1,108 @@
+# Auto Avaliacao de Git e Github
+
+
+# Parte 1 - Git Iniciante Level 1
+
+- criar um diretório pelo terminal do git
+
+- abrir esse diretório no vscode
+
+- iniciar o git no repositório pelo terminal
+
+- setar o nome de usuário global 
+
+- setar o e-mail de usuário global 
+
+- setar o editor vscode como padrão do git
+
+- visualizar as configurações globais
+
+- explicar os 4 estágios de arquivos do git:
+
+- criar um arquivo na pasta do git com o vscode
+
+repetir 3x os passos abaixo:
+	alterar o arquivo
+	adicionar na stage
+	commitar o arquivo
+
+- use o git checkout e mostre no vscode como esta o arquivo no momento do primeiro commit.
+
+- apos olhar use o git checkout master para voltar para o estado atual das coisas
+
+
+
+# parte 2 - Iniciante Level 2:
+
+- crie um novo projeto diretamente no github e nesse projeto crie automaticamente o arquivo Readme.md e o arquivo gitignore e explique o que sao esses arquivos.
+
+- use o git clone e clone o projeto recem criado do git para uma outra pasta do seu pc local, nao esquece de inicializar o git nessa pasta.
+
+- crie um arquivo index.html de exemplo dentro dessa pasta clonada e sincronize com o github para que ambas as pastas local e remota tenham a mesma versão do arquivo. git push 
+
+agora crie um arquivo dentro desse projeto diretamente pelo github, pode ser um arquivo python e sincronize as 2 pastas para que tenham o mesmo arquivo. git pull
+
+
+
+# Parte 3 - Git Intermediário Level 1:
+
+- explique o que eh uma branch no contexto do git e github
+
+- Crie um novo projeto para scripts powershell
+
+- crie uma nova branch para o projeto como o nome que vc quiser desde que seja de fácil identificação.
+
+- mostre quantas branchs existem pelo terminal do git e pelo github
+
+- alterne entre a branch master e a branch que vc criou pelo git
+
+- volte para a branch master
+
+- novamente alterne para branch que vc criou
+
+- crie um novo arquivo powershell nessa branch nova e de um commit
+
+- altere o arquivo acima mais 2x e de o commit em todas elas.
+
+- alterne para a branch master e veja se vc consegue visualizar esse arquivo e veja se ele aparece no git log da branch master.
+
+- use o git merge e mescle a branch master com a nova branch criada
+
+- use o git push e envie os arquivos para o github 
+
+- delete a branch criada anteriormente.
+
+
+
+# Git Intermediário Level 2:
+
+
+- o que são issues do git hub ?
+
+- crie uma issue no github solicitando um script para mostrar os hosts online.
+
+- crie o arquivo script solicitado, faca todo procedimento de enviar para o github pelo terminal do git.
+
+- pegue o hash do commit desse arquivo e responda a issue com  uma resposta de atendido e coloco o hash.
+
+- crie uma nova issue solicitando a criação de um script novo par seu projeto para listar programas instalados.
+
+- atenção vc nao quer alterar sua branch master que ja esta funcionando perfeitamente, logo vc deve criar uma branch nova para esse novo script.
+
+- apos feito os passos anteriores faca o procedimento padrão de commit do git mas nesse caso especifique no -m "mensagem e a #num_issue" e explique o que aconteceu.
+
+- a partir da branch nova criada anteriormente envie os arquivos para o github (vc vai ter que especificar tudo no git push)
+
+- agora volte para a branch master e faca um merge da branch nova com a branch master.
+
+- de um git push
+
+- verifique no git hub se tudo foi bem atualizado.
+
+- Com a nova conta criada faca um fork de um dos repositórios da conta principal pelo próprio github
+
+- Pela conta remota edite algum arquivo e crie um pull request e envie para o repositório original
+
+- vá no repositório original como dono da conta e veja se o pull request aparece para que vc faca o merge no seu repositório.
+
+Parabéns, vc terminou!!

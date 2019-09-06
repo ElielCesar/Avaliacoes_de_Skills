@@ -1,0 +1,440 @@
+Avaliação para aprendizado real!! -  Nivel 3
+
+Parte 01 – Usando o Wireshark
+
+1 – Mostre e explique com suas palavras o que são os filtros, a diferença entre filtros e displays filters, e cada opção da interface inicial do wireshark.
+
+2 – Crie 3 arquivos de captura que parem automaticamente após:
+
+- 75 MB de dados capturados
+- Após 5 minutos de captura
+- Após capturar 10.000 pacotes.
+
+3 – Mostre e explique as diversas opções da barra de ferramentas do wireshark, ao menos 5 opçoes de cada categoria.
+
+4 – Escolha uma das 3 capturas feitas e mostre e explique o que é a hierarquia de protocolos da guia statistic.
+
+5 – Mostre e explique o que é a ferramenta conversations do menu statistics.
+
+6 – Mostre e explique a ferramenta expert info.
+
+7 – Explique o que a severidade error, warnings e notes na janela expert info.
+
+8 - Como exportar objetos através de uma captura?
+
+9 - Explique os operadores de comparação do wireshark.
+
+10 – Adicione ao menos 3 colunas na packet list pane usando alguma caracteristicas dos pacotes.
+
+11 – Porque é necessario ser muito cuidadoso ao usar capture filters no wireshark?
+
+12 – Faça uma captura no wireshark que gere 3 arquivos .pcap após 3 minutos cada.
+
+13 - O que são os disectors do wireshark?
+
+14 – Mescle 2 arquivos de captura criando um terceiro.
+
+15 - é correto afirmar que a guia hierachy protocol tem todas as camadas do modelo OSI/TCP-IP ? explique.
+
+
+Parte 02 – Criação de Filtros e Botoes.
+
+1 – Crie alguns botões na interface do wireshark para:
+-ver somente pacotes indo para a porta 443.
+-ver somente pacotes tcp e http.
+-para ver pacotes com a flag reset.
+-para ver trafego com consultas dns internas.
+-para ver todos os pacotes com destino a broadcast. 
+
+2 – Crie filtros para mostrar pacotes tcp com:
+-flag push
+-flag reset
+-flag fin
+
+3 – Mostre como criar filtros http baseados nos seguintes métodos do http.
+-get, post 
+
+4 – Crie displays filters para mostrar as respostas do http com status code 200, 300, 400, 500.
+
+5 - Como filtrar o trafego DNS?
+
+6 - Mostre como criar filtros com as flags do dhcp.
+
+7 - Crie regras de cores para determinados tipos de trafego em sua análise, exemplo: pacotes com icmp type 3 e DNS erros devem ter a 
+cor vermelha…
+
+8 - Sabendo que o wireshark é uma tool do tipo GUI que não tem capacidade de capturar pacotes quem é que faz essa captura então?
+
+9 - Explique a frase " O wireshark pode dizer onde o problema está, mas não o porque ele ocorre."
+
+10 - Como o wireshark define cada tentativa de conexão a um alvo?
+
+11- Crie uma coluna baseada no index do fluxo tcp.
+
+12- Explique o que faz os seguintes atalhos de teclado no wireshark
+-CTRL + F
+-CTRL + N
+-CTRL + B
+
+13 - Marque alguns pacotes para destaca-los dos demais, sem usar as colors rules.
+
+14 - O que é um endpoint para o wireshark? e como isso esta relacionado com as conversations ?
+
+15 - Porque é importante não deixar a opção "update list in real time" desativada se vc não precisar acompanhar a captura ?
+
+16 - Por que o format de captura pcang é melhor do que o pcap ?
+
+17 - Mostre como fazer a captura em mais de uma interface ao mesmo tempo e mostre qual delas tem preferencia de saída durante a navegação em algum site e durante do download de um arquivo.
+
+18 - Mostre como usar um capture filter que capture somente pacotes maiores que 1500 bytes.
+
+
+Parte 03 – Explicando protocolos de rede.
+
+1 – Mostre e explique o que é o http, em que camada ele trabalha e o que é a ferramenta http tool e como fazer a remontagem dos pacotes http.
+
+2 – Mostre e explique como usar os fluxos tcp, http.
+
+3 – Explique a importância das flags tcp para a análise de trafego.
+
+4 – Explique o que são os itens abaixo na análise da sequência no tcp:
+-retransmission
+-fast retransmission e duplicate ack
+-tcp zero window
+-tcp window update
+-tcp window full
+-tcp out-of-order
+
+5 – O que é SSL/TLS?
+
+6 – Em que camada o SSL/TLS trabalha?
+
+7 – Explique o handshake no SSL/TLS
+
+8 – Explique o que é o RTT no protocolo tcp.
+
+9 – Mostre em um pacote SSL/TLS quais são as cifras criptograficas suportadas pelo cliente.
+
+10 – Explique como funciona o DHCP.
+
+11 – Mostre quais são as opções que seu host recebe via dhcp.
+
+12 – Explique o status code do http:
+-100, 200, 300, 400, 500
+
+13 – O Que são resets na conexão e porque eles acontecem?
+
+14 - Explique a suite de protocolos net-bios
+
+15 - Cite e explique cada uma das 5 atividades que um host faz antes mesmo de enviar um tcp handshake para o alvo: 
+- resolução de porta
+- resolução de nomes
+- comparação da localização do endereço alvo
+- resolução de MAC Address
+- resolução de rotas
+
+16 - Explique os seguintes tempos nos fluxos tcp 
+- tcp.time_relative
+- tcp.time_delta
+
+17 - Cite o PDU e os principais protocolos das 7 camadas do modelo OSI: aplicação, apresentação, etc...
+
+18 - Em que momento o dns usa conexões TCP e em que momentos usa conexão UDP?
+
+19 - O que é um gratuitous arp? e quais são as 3 circunstancias que geram os mesmos?
+
+
+Parte 04 – Conceitos de redes e resoluções de problemas na prática. 
+
+1 – Mostre e explique a ferramenta ip statistics.
+
+2 – Explique as principais causas da latência em redes e aplicações, 5 causas no minimo.
+
+3 – Mostre como é feita o processo de resolução de nomes na sua rede.
+
+4 – Analisando de uma forma genérica quais são os 3 tipos de problemas em rede?
+
+5 – Quais são os 5 motivos para problemas de performance das aplicações.
+
+6 – Porque não se deve usar os pacotes keep alive para análise de rede?
+
+7 – Usando o I/O Graph crie e mostre gráficos ou filtros para as seguintes situações:
+
+-Taxa de download e upload para um determinado site ou aplicação.
+-Taxa de retransmissões em uma conexão ou fluxo.
+-Taxa de duplicate acks no fluxo.
+-Taxa de tcp zero window no fluxo.
+
+8 – Mensure o throughput da rede fazendo um download de uma pasta do servidor local e o throughput de internet com o I/O Graph.
+
+9 – Use o tcp stream graph e analise e explique:
+-grafico de througput 
+-grafico de RTT
+-grafico de window scaling
+
+10 – Explique o que é e mostre como ativar esses recursos para ver os tempos de resposta em diferentes protocolos:
+-tcp delta time
+-dns delta time
+-http delta time
+
+11 – O que são e como descobrir broadcasts storms.
+
+12 – Quantos pacotes broadcast por segundo são considerados como uma broadcast storm?
+
+13 – Quais os principais sintomas de um broadcast storm na rede, nas aplicações e na máquina com o wireshark?
+
+14 – Broadcasts são encaminhados pelo roteador? 
+
+15 – Broadcasts são encaminhados entre vlans?
+
+16 – Pacotes de erros são encaminhados entre switches?
+
+17 – Quantos pacotes broadcast podem ser considerados muitos broadcasts e uma broadcast storm?
+
+18 – Quais os 3 principais causadores de broadcasts Storm?
+
+19 – Qual a quantidade aceitável de pacotes broadcast que um dispositivo pode gerar por minuto e por segundo?
+
+20 – Numa rede com respectivamente 100, 37, 31, 16 hosts, quantos pacotes broadcast devem ser esperados por minuto e por segundo?
+
+21 – Como proceder ao se deparar com problemas de broadcasts no protocolo spaning tree?
+
+22 – Quais as 2 características de um dispositivo que esta gerando broadcast na rede?
+
+23 – Qual é o filtro que se usa na ferramenta I/O Graph para mostrar os broadcasts na rede?
+
+24 – Como descobrir qual a maquina que mais esta enviando broadcasts na rede através da ferramenta conversations?
+
+25 – Quais as 3 ferramentas do wireshark que nos ajudam a identificarem broadcast storms?
+
+26 – Cite no minimo 5 protocolos que enviam broadcast em rede.
+
+27 – O ipv6 trabalha com broadcast? Explique.
+
+28 – O que é a fragmentação de pacotes e em que camada ela pode ocorrer?
+
+29 - Qual o problema que a fragmentação excessiva pode gerar na rede e especialmente na comunicação entre aplicação e banco de dados?
+
+30 - Qual o tamanho ideal do segmento que sai da interface?
+
+31 - O que é MTU?
+
+32 - O que é MSS?
+
+33 - O que significa:
+-bit1 (df bit)
+-bit 2 ( mf bit )
+
+34 -“Os bancos de dados podem criar pacotes muito grandes de até 1800 bytes” essa afirmação é verdadeira? Qual o problema relacionado a fragmentação um pacote desse tamanho pode gerar? Como se deve resolver esse tipo de situação?
+
+35 - É realmente necessário usar o wireshark para resolver problemas de roteamento?
+
+36 - O que é o campo TTL e qual sua relação com o roteamento?
+
+37 - O que a mensagem de icmp “destination network unreachable” significa?
+
+38 - O que a mensagem de icmp “destination host unreachable” significa?
+
+39 - Porque o valor do TTL nunca chega a zero em condições normais de trafego?
+
+40 - Quais os problemas mais comuns c/ vlans?
+
+41 – Mostre como criar regras de firewall a partir de um determinado pacote no wireshark.
+
+42 - Quais são os problemas mais comuns com o protocolo ARP?
+
+43 - Quais as 3 ferramentas para analise do trafego ip ?
+
+44 - Quais são e como encontrar problemas de fragmentação?
+
+45 - Quais são os problemas de roteamento?
+
+46 - Como encontrar ips duplicados na rede? 
+
+47 - Quais os problemas de DNS mais comuns?
+
+48 - Explique e mostre como se calcula o throughput da rede a partir da largura de banda.
+
+49 - Explique porque o e-mail diferente do que muitos pensam podem pesar a rede?
+
+50 - Explique porque usar o terminal services pode consumir a banda da rede.
+
+51 - Explique porque é importante fazer análise de trafego nas aplicações.
+
+52 - Qual é a porcentagem de retransmissoes e duplicate acks aceitáveis na rede?
+
+53 - Usando o I/O graph e os display filters analise e explique:
+
+- a largura de banda por usuário e por aplicação.
+- o delay da comunicação
+- o jitter
+- a perca de pacotes.
+
+54 – Explique como setar o tempo para desde o pacote anterior e qual sua utilidade na analise.
+
+55 – Qual é a função da opção allow subdissector no protocolo TCP e por que ele interfere na mensuração do tempo quando estamos fazendo a analise e quando devemos deixa-lo ativado ou desativado.
+
+56 - Porque é importante sempre que possível fazer a captura na máquina do cliente? ou próximo dela usando um tap por exemplo, cite 3 vantagens no minimo.
+
+57 - Quais são os 4 tipos de pacote que os switches encaminham na rede por padrão?
+
+58 - Quais as fomas de se analisar o trafego de uma porta do switch?
+
+59 - Qual é o principal problema ao se capturar trafego no switch usando espelhamento de porta (spanning)?
+
+60 - Qual é a melhor alternativa se vc não puder usar um TAP e não puder instalar o wireshark no pc do usuario?
+
+61 - Porque não se deve usar o wireshark para capturar o trafego em links com muito trafego? e qual ferramenta é a mais recomendada para esse tipo de situação ?
+
+62 - Qual a importância de se ter arquivos de captura antes e depois da resolução de problemas?
+
+63 - Qual é o primeiro passo de todos antes de fazer a captura de pacotes no host do cliente?
+
+64 - Explique a expressão " Se o seu computador tem que perguntar mais de uma vez por alguma coisa na rede ( nomes, serviços, mac, etc ) você tem um problema de performance"
+
+65 - Quais são as principais causas para o não estabelecimento de uma conexão tcp ? cite 2 ao menos.
+
+66 - Porque é importante ficar de olho na coluna time e nos tempos de resposta dos serviços como http, dns, etc ?
+
+67 - Em todo trafego podem existir 2 tipos de delays, os que afetam o usuario e o que não afeta, explique a afirmação.
+
+67 - Qual a primeira coisa que você deve olhar no arquivo de captura quando o usuario reclama que a rede/aplicação esta lenta?
+
+68 - Explique a importância dos seguintes delays em uma captura
+- delay no tcp handshake
+- delay antes do server atender uma requisição ( http, dns, smb, radius ) 
+- delays nos fluxos de dados 
+- delays de windows size / buffer
+
+69 - O que acontece se eu habilitar a preferencia " calculate conversations timestamp " ?
+
+70 - Porque é importante levar o tempo em consideração ao verificar a performance da rede ?
+
+71 - Em relaçao ao protocolo http o wireshark tem a preferencia "allow subdissector to reassemble " nas preferencias do tcp, explique quando é interressante deixar essa função ativa e quando é interressante deixa-la desabilitada.
+
+72 - Quais são os 4 principais sinais de perca de pacotes em um fluxo? Dica são displays filters do tcp.analisys.
+
+73 - Quais são os 2 principais sinais de congestinamento no fluxo. Dica tem a ver com as janelas.
+
+74 - Em 99,99 % das vezes a perca de pacotes ocorre em quais equipamentos de rede?
+
+75 - Explique o que é a condição de tcp zero window e porque ela ocorre.
+
+76 - Qual a relação entre os campos windows size e windows size scaling factor?
+
+77 - Problemas de window full e zero window estão relacionados de que forma? 
+
+78 - Como o wireshark sabe quando um problema de window full ocorre?
+
+79 - O que são pacotes de zero window probe e como eles estão relacionados a problemas de window size.
+
+80 - Mostre como analisar mais de um fluxo de dados nos I/O graph ao mesmo tempo.
+
+81 - Mostre como identificar que exite traffic shapping na rede pelo I/O Graph
+
+82 - Crie um golden graph e mostre como ele correlaciona quedas no throuputh com problemas de tcp
+
+83 - qual a principal diferença de funcionamento entre modo promiscuo e o modo monitor nas placas de rede?
+
+84 - Quais são as 3 bibliotecas usadas para captura de pacotes no linux, windows, wifi ?
+
+85 - Para que server o tcp.time_delta em uma analise de aplicação?
+
+86 - Crie um gráfico que mostre o tempo máximo, minimo e médio dos pacotes em uma conexão.
+
+87 - Como fazer a captura de um problema que ocorre somente as vezes enquanto o usuário esta usando o sistema/aplicação ?
+
+88 - Cite ao  menos 3 tipos de baselines que vc deve criar enquanto tudo esta funcionando para resolver problemas rapidamente.
+
+89 - Explique as 5 formas de captura em uma rede cabeada com suas vantagens e desvantagens
+-port mirror
+-hubbling out
+-tap
+-envenenamento de arp
+-intalação no cliente
+
+90 - o que é uma consulta DNS recursiva ?
+
+91 - navegue por 3 sites e para cada site gere uma captura, após isso mostre no I/O graph a quantidade de dados em bytes do top talker 
+da conexão, mostre também os ips de terceiros relacionados ao site.
+
+92 - antes de enviar o primeiro pacote para o alvo o computador que envia a mensagem precisa resolver as questões relativas em cada uma das 7 camadas do modelo OSI, quais são essas resoluções ?
+
+93 - Porque em muitos casos vc não sera capaz de ver os dados HTML legíveis quando navegar pela lista de pacotes mesmo que os mesmos não tenham criptografia? e como eu posso ler esses dados ?
+
+94 - ao entrar em um determinado site e usando o wireshark o analista descobriu que foram feitas diversas outras requisiçoes a sites que ele não fazia ideia do que era, explique o que aconteceu.
+
+95 - Apos resolver o endereço mac é necessário que seja feita uma consulta para resolver o nome DNS para um endereço IP, quais são as 2 condições que podem impedir uma consulta DNS pelo cliente?
+
+96 - Explique como algumas informações do cabeçalho ip e tcp ajudam a identificar o sistema operacional do host.
+
+97 - O que são os canais usados em WLANs e como deve ser feita a captura levando em conta esses canais ?
+
+98 - Quais os cuidados que devem ser tomados em relação ao ambiente físico quando vc for fazer uma captura em WLANs ?
+
+99 - O que é uma sobreposição de canais em WLANs? e como isso interfere na captura ?
+
+100 - Posso tentar resolver problemas de interferência wireless usando o wireshark ?
+
+101 - Quais são os 4 modos de operação das placas de rede wireless? Explique cada uma delas.
+
+102 - Porque não consigo capturar dados de wireless como gerenciamento e controle? qual a relação disso com a winpcap ?
+
+103 - mostre como inserir comentários nos pacotes do wireshark
+
+104 - mostre como visualizar quais pacotes foram comentados
+
+105 - mostre como exportar comentários de uma determinada captura para um arquivo txt
+
+106 - mostre como verificar as mudanças de topologia através do protocolo STP ( spanning tree ) 
+
+107 - mostre como descobrir a versão do Cisco IOS rodando no Switch através do protocolo CDP ( cisco discover protocol )
+
+108 - mostre como descobrir a vlan nativa do Switch através do protocolo CDP
+
+109 - mostre como descobrir o domínio de gerenciamento da vlan pelo protocolo VTP ( vlan trunking protocol )
+
+110 - mostre como descobrir o numero da vlan através do campo ISL Vlan ID do protocolo VTP ( converter de hexa para decimal ) 
+
+111 - mostre como descobrir o nome de uma vlan através do protocolo VTP  
+
+112 - mostre como descobrir os endereços ipv4 e ipv6 de gerenciamento através do protocolo LLDP
+
+113 - mostre e explique o que e uma comunity string no protocolo snmpv2 se possível.
+
+114 - mostre qual prefixo ipv6 esta sendo anunciado pelo roteador através do protocolo icmpv6
+
+115 - mostre qual o cliente SSH usado pelo cliente através de um arquivo de captura com SSH.
+
+116 - mostre se no arquivo de captura o servidor usa alguma porta  acima de 1024 em tcp ou em udp.
+
+117 - explique a frase "se camada de transporte não segmenta os dados a camada de rede terá que fragmenta-los"
+
+118 - qual o delay ideal para redes voip ?
+
+119 - quanto tempo uma porta tcp ainda fica aguardando comunicação apos o encerramento da conexão ? e qual a relação disso com a mensagem de port reused do wireshark ?
+
+120 - Desenhe a estrutura do wireshark de modo gráfico.
+
+121 - Faça uma captura de pacotes na sua maquina sem usar nenhum filtro de captura, descreva e explique os protocolos que você NÃO esta acostumado a visualizar, Não pode ser : http, dns, ftp etc...
+
+122 - O que acontece quando uma aplicação conhecida decide usar portas não padrão ? por exemplo servidor http usando a porta 3333.
+
+123 - Quais seriam os 2 momentos em que você poderia querer especificar manualmente o dissector para determinado protocolo no wireshark ? mostre como fazer.
+
+124 - Mostre como atrelar determinada porta a um protocolo desejado, fazendo isso pelo "protocols preferences", todo protocolo aceita isso ?
+
+125 - Em quais protocolos você deve desativar o " checksum validation " e por que ?
+
+126 - Quais são os 3 tipos de latência que você pode encontrar em uma captura ? e qual a menos comum e por que ? 
+
+127 - Qual a primeira janela que você deve olhar ao suspeitar que um host foi comprometido/infectado ?
+
+
+Parte 05 – Segurança na análise de pacotes.
+
+01 – É possível decriptar o trafego SSL? Mostre como.
+
+02 – Mostre como é possível ver dados como usuário e senha quando não se usa o ssl com http (https).
+
+03 - Mostre como identificar um syn scan na rede, usando um arquivo de captura de exemplo.

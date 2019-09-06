@@ -1,0 +1,110 @@
+﻿AVALIAÇÃO PFSENSE 2019
+
+PROJETO PFSENSE REDE COLORADO
+
+Bem vindo novo analista de TI, sua missao nesse momento é realizar a instalação do firewall pfsense conforme solicitado abaixo.
+
+########## CONFIGURAÇÕES BÁSICAS NIVEL 1 #####################
+
+-O pfsense deve ter 4 interfaces, sendo 2 para rede NAT, 1 para a rede administrativa e 1 para a rede acadêmica.		
+-Trocar a senha do usuário admin						
+-Nome do sistema pfsense.colorado							
+-Dominio: colorado.local							
+-Hora com NTP a.ntp.br e b.ntp.br	
+					
+-DNS como local (127.0.0.1) e do Google 8.8.8.8						
+-Adicione o dashbord de consumo da lan e da wan 					
+-Crie um usuário chamado suporte com permissões administrativas 	
+- ativar o dhcp server e colocar ip estatico no servidor AD caso vc tenha um.
+- Navegar na internet 								
+-Colocar uma senha no console						
+-Coloque o Timeout de sessão para 20 minutos				
+-Habilitar o acesso via ssh ao firewall 					
+-Colocar senha de bloqueio na console		
+
+WAN
+-Bloqueie tudo da wan por padrão ( já vem assim) 				
+-Permita o trafego de redes privadas na wan para os testes.		
+
+LAN
+-Crie alias para portas  essenciais						
+-Permita a saída para as portas essenciais					
+-Bloqueie a saída de todas as outras portas não essenciais			
+-Crie alias bloquear Facebook ips 					
+
+-Crie agendamento e libere o Facebook em horário de almoço das 12 as 13
+
+-Controle de Banda para os alunos
+
+	Total 200 KB de Down + 200 KB de UP por usuário
+	
+-Acesso a rede lan com autenticação no squid proxy 
+
+- Criar os usuários tanto no pfsense quanto no squid: renilce, eliel, alunoifro, pedro	
+- instale e configure o squid guard na rede e permita somente acesso a internet para os clientes que tem o proxy configurado, 
+  bloquei os sites pesados como youtube, netflix, facebook, whatsapp, etc.
+- qual a diferença entre usar o squid em modo transparente e usar em modo autenticado com squid guard ?
+- instale o light squid e mostre os relatórios de navegação.
+
+- no momento de realizar o backup do pfsense os dados de pacotes instalados e listas do squid tambem sao salvas ? e como fazer para não salvar os pacotes instalados ?
+- qual a diferença se na hora do backup vc marcar ou desmarcar a opção dados RRD ?
+- mostre como visualizar o gráfico de trafego em tempo real para saber quanto da banda esta sendo consumida
+- coloque os serviços que estão rodando ou parados no pfsense no dashboard em uma unica janelinha.
+- mostre a quantidade de memoria livre, ocupada em swap e quantos processos estão rodando em seu pfsense.
+
+- crie um loadbalance com as interfaces wan do pfsense e faca os testes para ver se funciona.
+- crie um failover com pfsense para que quando o link principal cair o link secundário assuma e quando voltar o principal assuma como link principal novamente.
+- configure uma das suas 2 interfaces wan para ser o gateway padrao e coloque o ip monitor 8.8.8.8 e o tempo de sonda para 5 segundos
+- um admin de rede criou uma regra na interface LAN do pfsense para impedir que 2 hots dessa mesma rede LAN comuniquem-se( 192.168.1.10, 192.168.1.15) obviamente nao funcionou!! vc sabe explicar o motivo ?
+- crie uma rota estática para que as maquinas acessem o ip 186.219.240.70 pelo gateway reserva ou a WAN 2
+
+########## CONFIGURAÇÕES BÁSICAS NIVEL 2 #####################
+
+- criar um port redirection que direcione da porta 80 wan para um servidor http interno.
+- criar um port redirection que direcione da porta 8000 wan para outro servidor na rede interna.
+- simular um acesso externo para verificar se os redirecionamentos estao funcionando.
+- libere ping para interface wan
+- crie bloqueie o download de torrents na rede da maneira que vc achar mais viável.
+
+- crie uma CA no seu pfsense e exporte o certificado para a maquina do cliente.
+- quais sao os 4 tipos de ips virtuais que vc pode criar no pfsense ? ( proxy arp, carp , ip alias, other )
+- use o traffic shaper e crie regras separadas para priorizar os seguintes servicos: voip , IMAP, POP, VPN entendendo que vc tem um link dedicado de 15 Mbps
+-crie uma bridge entre sua interface LAN e DMZ para mostrar como funciona e verifique a comunicação entre as redes em camada 2 e 3
+- imagine que a interface LAN do pfsense precise estar em 2 vlans diferentes ao mesmo tempo com uma unica interface fisica, faca essa configuração , se preciso desenhe algo no draw.IO
+
+- explique quais são as 3 formas de limitar banda no pfsense, e crie um limiter que limita a conexão do usuário para os endereços de um site por exemplo sem que isso afete o restante da banda do cliente para outros sites, exemplo "limite para 250 KB o trafego de todos os usuários para o youtube mas não para outros sites importantes."
+- mostre com habilitar o snmp no pfsense para enviar dados para o zabbix por exemplo.
+- mostre como visualizar os logs do pfsense e como direcionar esses logs pra um servidor syslog remoto
+- instale o ntopNG e monitore as interfaces LAN do pfsense para verificar o fluxo e mostre quais os protocolos/destinos mais usados e quais os top talkers da rede.
+
+########## CONFIGURAÇÕES INTERMEDIÁRIAS NÍVEL 1 #####################
+
+------------- VPN --------------------
+
+-Criar um usuário chamado remoto no pfsense.							
+-Acesso a rede por meio de VPN para os usuários trabalharem de casa.			
+-Instalar o pacote openvpn client export						
+-Criar o ip do tunel como 192.168.70.0/24						
+-Permitir acesso a rede local 192.168.10.0/24					
+-Terminado as configurações criar um certificado para o usuário remoto		
+-Exportar o programa e o certificado para a maquina do usuário			
+-Acessar de outra maquina fora da LAN para testar se a VPN funciona.
+- crie uma vpn com a reitoria para que o AD local possa sincronizar com o ad da reitoria.
+
+
+
+------ Captive Portal -----------
+
+-Acesso a rede Wifi com Captive portal 
+-Adicionar uma interface no pfsense e renomeá-la para wlan		
+-Ativar a wlan e criar um pool no dhcp server para ela.			
+	WAN_AP = 192.168.100.10/24 ( estático ) 				
+	LAN_AP = 192.168.0.1/24						
+	SENHA_AP = 123456789						
+	CANAL DE TRABALHO = 1/6/11						
+	TIPO DE SENHA WPA2-PSK						
+-Criar um hotspot para a wlan						
+-Permitir somente os usuários cadastrados usarem o wifi			
+-Criar uma pagina de login personalizada para o hotspot			
+-Verificar se um outro usuário pode se conectar fora do captive	
+- crie um captive portal para os usuários da rede wifi ( use seus routers para isso ) e ative esse captive,  crie outro captive portal na rede acadêmica ou administrativa cabeada e coloque para que os usuários façam a autenticação por ele.

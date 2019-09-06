@@ -1,0 +1,132 @@
+Auto Avaliação de OPNSense
+
+1 - instale o opnsense com 4 interfaces no virtual box:
+	- interface wan ( modo nat/bridge ) - configure no shell 
+	- interface wan 2 ( modo nat/bridge )  - configure via web
+	- interface LAN_ADM - configure no shell
+	- interface LAN_ACAD - configure via web
+
+
+2 - Apos realizar as primeiras configurações durante a instalação use o wizard e configure as opções:
+	- nome opnsense
+	- domínio opnsense.local
+	- servidor ntp = a.ntp.br, b.ntp.br
+	- fuso horário América/porto velho
+	- permita acesso ao firewall via ssh 
+	- desabilite o bloqueio de redes bogon
+	- verifique se exite update e atualize o firewall
+	- verifique se os usuários ja tem acesso a internet
+	- mostre como realizar pesquisa por alguma função que vc não sabe onde esta dentro do firewall.
+	- coloque endereços ips estáticos nas interfaces de LAN 
+	- se as interfaces wan estiverem em bridge coloque nelas ips estáticos
+	- marque as opções para que as interfaces não possam ser removidas facilmente.
+	- crie uma regra de ping e permita ping nas interfaces WAN ( se em bridge ).
+	- se as WANs estiverem em bridge set um endereço de gateway para elas.
+	- entre em modo shell e recarregue os serviços sem rebotar o firewall.
+	- mostre informaçoes detalhadas das placas usando o overview.
+	- em caso de uso de IDS mostre quais as configurações que devem ficar marcadas nas config de interface.
+	- mostre quais são os tipos de interface que o opnsense suporta ( dica olhe nos menus e submenus )
+	- explique e mostre como colocar uma interface em mais de uma vlan ( ex: em2 na vlan 100, 200 ).
+	- mostre os logs geral, backend, e onde estão as configurações gerais dos logs do opnsense.
+
+
+3 - Configurando Serviços de DHCP, DNS e Certificados
+	- Configure o DHCP para distribuir endereços.
+	- Crie um mapeamento estático no DHCP.
+	- configure o opnsense para atuar como seu dns local ( dns unbound )
+	- configure o ubound dns para registrar o nome dos hosts conforme eles pegarem endereço ip.
+	- deixe o DNS funcionando somente nas interfaces LAN.
+	- habilite o encaminhamento de consultas dns caso este ja nao esteja configurado
+	- crie um dns overrides apontando xvideos.com para 186.219.240.80
+	- como fazer para impedir todos os clientes da LAN realizarem consultas DNS mas acessarem por IP ?
+	- crie uma CA interna com o nome opnsense-ca
+	- crie um certificado auto assinado usando a CA criada anteriormente.
+	- mostre como trocar o certificado da web GUI, não precisa realmente trocar, so mostre o procedimento
+	- por que quando vc cria uma CA interna + certificado auto assinado o ícone de HTTPS do chrome não fica verde ?
+	- mostre como fazer instalação de plugins no opnsense e instale o plugin cicada para alterar o tema do firewall para dark.
+
+4 - Troubleshooting em problemas de rede:
+	- mostre se existe conectividade de camada 2 entre o cliente e o firewall pela arp table.
+	- faça um teste de conectividade de camada 3 usando o ping e mostre o resultado.
+	- faça um teste de rota de camada 3 usando o traceroute e mostre o resultado.
+	- faça um teste de conectividade de porta para algum servidor web ou com ip publico.
+	- faça um teste de resolução dns e mostre o resultado.
+	- faça uma captura de pacotes para analise com wireshark e baixe o pcap para seu pc.
+	- mostre onde ficam os gráficos de trafego básico, uso de memoria e pacotes do opnsense só mostre o lugar mesmo.
+	- mostre o que eh o netflow como ativa-lo e como ver os relatórios dentro do próprio opnsense
+	- mostre como esta o consumo de banda e o top user através do gráfico de trafic do opnsense.
+	
+
+5 - Gerenciamento de Usuários:
+	- crie um usuário mas não o coloque no grupo de administradores.
+	- de as permissões para o usuário em diagnostics, logs, backups, Services, SSH Shell.
+	- mostre a tabela que bloqueia o usuário em varias tentativas incorretas de login ssh no opnsense.
+	- mostre como configurar a autenticação no opnsense pelo AD, as informações podem ser fictícias.
+
+
+6 - Regras de Firewall:
+	- como o opnsense lê as regras que vc criou 
+	- a ação padrão do opnsense eh permitir ou bloquear 
+	- crie um alias de porta com as portas 53, 80, 443, 3128, 8080 chamado portas permitidas.
+	- crie um alias de ip com alguns endereços que vc nao quer que seus usuários acessem.
+	- crie uma regra de firewall que permita saída de trafego somente para o alias de porta chamado portas permitidas
+	- crie uma regra de firewall que bloqueio a saída para o alias com os endereços ips que não devem ser acessados.
+	- crie um schedule horario_comercial e aplique na regra de saída padrão para internet
+	- crie uma schedule horario_almoço e aplique para uma regra permitindo acesso ao facebook nesse horario.
+	- crie uma regra de bloqueio ao windows update usando um alias com arquivo no pastebin.	
+	- crie um grupo de interfaces no firewall para que uma regra valha tanto para a lan acad quanto para lan adm.
+	- explique para que serve um virtual ip e crie um para a interface wan. ( ip alias )
+	- crie uma regra de port nat para que seja possível acessar o MS RDP na rede Lan.
+	- o estagiário desativou o nat de saída automático, mostre onde e como mudar para automático
+	- mostre os logs do firewall em tempo real e os logs sumarizados com gráficos bonitos.
+	- mostre como encerrar todas as conexões ou apenas uma em especifico no firewall diagnostics.
+	- Crie em Shapper um pipe de 3 Mbps para Download e 1 Mbps para Upload.
+	- use o shapper do pfsense e limite a quantidade de Mbps para uma subrede e depois para a interface toda ( any ).
+
+
+7 - Configurando Web Proxy com Squid:
+	- habilite o squid proxy deixe as opções padrão setadas, mude apenas o Nome e o e-mail
+	- em cache settings habilite o cache local, com 1024 MB de espaço, os demais deixe no padrão.
+	- em Forward proxy deixe marcado as opções padrão e deixe o proxy somente para a LAN-ACAD por enquanto.
+	- vá no cliente da LAN-Acad agora e configure o proxy no sistema windows.
+	- bloqueie alguns sites pelo proxy e veja se funciona.
+	- o squid do opnsense precisa de autenticação para filtrar ssh como o pfsense ?
+	- baixe uma black list para seu opnsense, pode ser a shalla list.
+	- aplique o filtro de porn na list e tambem no filtro de palavras do proxy.
+	- crie um usuário no opnsense, de permissões de proxy nas permissões.
+	- mude o proxy para autenticado e autenticação local.
+	- tente navegar com o usuario autenticado e veja se esta funcionando.
+	- baixe o plugin os-web-proxy-useracl e instale no seu opnsense.
+	- configure 3 regras usando seu novo plugin para que ele bloquei linkedin, uol, mercadopago para um dos usuários de teste.
+
+
+8 - Configurando IDS e IPS no OPNSense:
+	- qual IDS/IPS ja vem padrão com o opnsense ?
+	- ative o ids e o ips no firewall ( interface WAN )
+	- verifique se as opções nas configurações de interface estão marcadas para o bom funcionamento do IPS.
+	- Escolha uma assinatura de trafego e realize o download da mesma e coloque todas suas assinaturas para drop.
+	- use o IDS/IPS e bloqueie o torrent na rede.
+
+
+9 - Configurando Captive portal:
+	- escolha em que interface vc vai habilitar o captive portal de preferencia na interface de teste onde vc fez as vlans.
+	- habilite os serviços de DNS e DHCP para esta interface.
+	- crie as regras de firewall necessarias para que esta interface possa navegar na internet.
+	- crie uma regra de firewall permitindo o acesso dessa lan para as portas 8000 - 10000.
+	- crie uma regra de firewall para que essa interface não acesse outras redes privadas que vc usa.
+	- crie uma nova zona no captive portal marque somente as opções ( enable, interface, autenticacao not selecioned, description ) 
+	- salve as configurações, reinicie o serviço de captive portal e tente acessar uma pagina web nessa rede do captive portal.
+	- mostre o endereço ip que o cliente pegou e qual o nome de usuário que ele esta usando.
+	- desconecte esse usuário do captive portal para que ele tenha que fazer login novamente.
+
+
+10 - LoadBalance, FailOver e VPN :
+	- remodele seu pfsense para que ele tenha 2 interfaces WAN ( 1 bridge e 1 em Nat ) e 2 Interfaces Lan ( adm e acad ).
+	- crie 2 gateways no opnsense caso apenas 1 tenha sido criado e monitore os ips 1.1.1.1, 8.8.8.8
+	- crie um grupo de gateways para fazer failover coloque deles com peso menor ( prioritário ) e outro com peso maior.
+	- va na regra padrão e troque o gateway de saída da regra principal, vc deve continuar navegando apos essa troca.
+	- use o tracert para mostrar se o fluxo realmente esta saindo pelo gateway que vc especificou na regra padrao.
+	- como eu mudo o gateway padrão de todas as regras de uma vez so ?
+	- altere nas suas regras de saida do opnsense para que elas usem o grupo de failover e teste para ver se funciona mesmo.
+	- qual a diferença de configuração entre loadbalance e failover durante a configuração dos tiers ( pesos ) ?
+	- crie uma vpn entre o campus e a reitoria usando o openvpn e teste para ver se realmente existe conexão icmp, http.
