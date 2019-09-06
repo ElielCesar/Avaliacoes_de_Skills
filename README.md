@@ -1,13 +1,13 @@
 # Avaliacoes_de_Skills
 Auto Avaliações de Skills Técnicas Teóricas e Praticas nos seguintes tópicos:
 
-PFsense
-OPNSense
-Mikrotik
+PFsense,
+OPNSense,
+Mikrotik,
 
-Wireshark
-Wireless
-Cisco CCNA
+Wireless,
+Wireshark,
+Windows Server 2012,
 
+Cisco CCNA,
 Git e GitHub
-Windows Server 2012
