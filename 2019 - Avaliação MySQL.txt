@@ -42,5 +42,4 @@
 - mostre como criar usuarios no sgbd mysql
 - mostre como criar um backup do banco de dados
 - faca um backup de um banco, apague o schema e restaure tudo novamente
-
-
+- mostre os indicadores de consumo de memoria e processamento.
