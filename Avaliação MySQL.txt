@@ -1,0 +1,46 @@
+- quais as etapas para criacao de um banco de dados ? dica ( sao 3 )
+- explique o que sao atributos, colunas, instancias, chaves primarias e estrangeiras
+
+# parte conceitual
+- mostre e explique juntamente com as atividades o que eh cardinalidade no brmodelo
+- crie um modelo entidade relacionamento 1 pra 1
+- crie um modelo entidade relacionamento 0 pra 1
+- crie um modelo de entidade relacionamento n pra n
+
+# parte logica
+- utilizando a o mysql workbench crie um modelo logico utilizando no minimo 3 tabelas
+- mostre como o workbench trabalha com a cardinalidade.
+- explique o que eh a primeira, segunda e terceira formas normais.
+- explique o que eh restricao de integruidade referencial
+- mostre como converter o modelo logico para a linguagem sql.
+- mostre como salvar os modelos logicos em arquivos e importa-los 
+
+# crie um esquema chamado avaliacao e faca o sequinte
+- crie uma tabela aluno (matricula, nome, serie)
+- crie uma tabela disciplina(codigo_disciplina, nome, professor_responsavel)
+- crie uma tabela avaliacao(aluno.matricula, disciplina.codigo_disciplina, disciplina.professor_responsavel, nota)
+
+- explique o que eh a transaction, commit e rollback
+- insira dados na tabela aluno
+- insira dados na tabela disciplina
+- insira dados na tabela avaliacao
+
+- altere a tabela aluno e adicione a coluna sexo(varchar)
+- altere a tabela aluno e modifique o tipo da coluna sexo para enum()
+- altere a tabela disciplina e adicione a coluna carga_horaria tipo int
+- altere a tabela disciplina e mude o tipo da coluna carga_horaria para decimal(10,2)
+- escolha um das ocorrencias de aluno e altere seu nome apenas para fins de aprendizagem
+- escolha uma das ocorrencias de disciplina e aumente sua carga horaria
+- crie uma tabela teste e ao mesmo tempo preencha ela com os dados de outra tabela via select
+- crie uma tabela via linha de comando e posteriormente preencha ela com um select de outra tabela
+- mostre como criar um alias durante uma consulta
+- mostre como criar um innner join entre 2 ou mais tabelas para exibir um resultado completo
+
+# parte fisica
+- explique o que eh indice e mostre como criar um
+- explique o que eh uma view e mostre como criar uma
+- mostre como criar usuarios no sgbd mysql
+- mostre como criar um backup do banco de dados
+- faca um backup de um banco, apague o schema e restaure tudo novamente
+
+
