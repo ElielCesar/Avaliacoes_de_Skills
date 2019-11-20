@@ -10,4 +10,5 @@ Wireshark,
 Windows Server 2012,
 
 Cisco CCNA,
+MySQL
 Git e GitHub
