@@ -1,50 +1,83 @@
-﻿1 - o que é mk ? e qual a diferença de routeros para routerboard ? 
+### Primeira parte - Configuracoes Iniciais
+ 
+ 1 - o que é mk ? e qual a diferença de routeros para routerboard ? 
 
 2 - qual é o site oficial da mk ? 
 
-3 - instale o mk em uma maquina virtual e ative a licença. 
+3 - o que é a versao cloud hosted do mikrotik e pra que serve ?
 
 4 - quais são os niveis de licenciamento da mk ?
 
+5 - quais as 4 formas de acessar o mikrotik ?
+
 5 - pelo terminal mostre informaçoes das placas de rede do mk. 
 
-6 - preciso de um endereço ip para acessar o mk ? e quais são os 4 protocolos que são
-necessarios para encontrar um routeros na rede ? 
+6 - mude a senha do admin.
 
-7 - no seu mk adicione 3 interfaces de rede.
--wan
--lan administrativa
--lan academica
+7 - mostre onde inserir a licença do mk.
 
-8 - ative o dhcp server e client para cada uma das interfaces ( crie o pool a sua escolha). 
+8 - mostre onde resetar as configuraçoes do mk para default.
 
-9 - verifique se o host cliente pegou dhcp e amare o mac ao endereço.
+9 - acesse a interface web do mk.
 
-10 - mude a senha do admin.
+10 - explique a aba quick set.
 
-11 - explique a aba quick set.
+11 - o que é a guia caps man ?
 
-12 - o que é a guia caps man ?
+12 - mostre quais pacotes estão instalados no seu mk.
 
-13 - adicione 3 endereços DNS ao mk.
 
-14 - mostre onde fica o pool de endereços do dhcp.
 
-15 - mostre quais pacotes estão instalados no seu mk.
+### Parte 2 - Servicos de Rede
 
-16 - explique as rotas no mk.
+1 - usando sua routerbord faca com que seu mk use a interface wireless como station e consiga se conectar a uma rede wifi existente e permita a navegacao, obs: a interface wireless vai funcionar como uma interface WAN, vc precisara de uma bridge.
 
-17 - desabilite os serviços de ftp, telnet e mude a porta web para 8044.
+2 - ative o dhcp cliente na interface bridge wan que vc acabou de configurar
 
-18 - acesse a interface web do mk.
+3 - insira 2 enderecos de DNS a mais no seu mikrotik ( 8.8.8.8 e 8.8.4.4 ) fora o que ele ja recebeu na wan com o dhcp client
 
-19 - ative o nat para seus clientes navegarem na internet.
+4 - ative o dhcp server para cada a interface LAN ( crie o pool a sua escolha) e passe o ip do mikrotik como servidor dns primario e o do google como secundario para os clientes
 
-20 - crie uma regra de bloqueio para o facebook de maneira simples.
 
-21 - mostre onde inserir a licença do mk.
+5- verifique se os hosts cliente pegou dhcp e amare o mac ao endereço.
 
-22 - mostre onde resetar as configuraçoes do mk para default.
+
+6 - explique as rotas no mk.
+
+7 - explique a diferenca de loadbalance e failover e mostre como configurar cada uma, apenas mostre os locais nao precisa configurar nada de fato.
+
+8 - desabilite os serviços de ftp, telnet e mude a porta web para 8044.
+
+
+### Parte 3 - Firewall
+
+- explique detalhadamente o que sao tables, chains e rules no mikrotik
+
+- explique como funciona as chains da tabela filter ( input, foward, output )
+
+- explique como funciona a tabela nat 
+
+- ative o nat para seus clientes navegarem na internet.
+
+- vc deve trabalhar com o firewall em modo DEFAULT DROP e permitir apenas o que vc quer.
+
+- crie uma regra permitindo que as respostas passem e coloque ela no local certo e explique o motivo disso.
+
+- coloque os comentarios inline para ficar mais bonito a exibicao.
+
+- crie uma regra bloqueando o ping externo ( sera desabilitada depois )
+
+- crie uma regra 
+
+- crie uma regra de bloqueio para o facebook de maneira simples.
+
+- crie 12 regras para bloqueio de sites pornos de maneira simples, use a copia das regras para ser  mais agil.
+
+- 
+
+
+
+
 
 23 - faça um backup do sistema salve no seu pc.
 
@@ -54,8 +87,17 @@ necessarios para encontrar um routeros na rede ?
 
 26 - mostre quais os recursos mais consumidos pelo mk.
 
-27 - altere a porta padrao do winbox.
-
 29 - explique como funciona o safe mode. 
 
-30 - mostre como fazer controle de banda através das queues.
+30 - mostre como fazer controle de banda através das queues simples
+
+
+
+
+
+##############################################################
+
+- quais as 4 formas de acessar o mikrotik ?
+por ip, por mac, via ssh, via web
+
+
