@@ -102,4 +102,6 @@
 
 6 - mostre como fazer controle de banda através das queues simples
 
+7 - Escolha uma interface que nao esta sendo usada crie 2 vlans nela, atribua ip as vlans e ative o dhcp server em cada vlan
+
 
