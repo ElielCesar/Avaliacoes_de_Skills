@@ -1,6 +1,6 @@
 ### Primeira parte - Configuracoes Iniciais
  
- 1 - o que é mk ? e qual a diferença de routeros para routerboard ? 
+1 - o que é mk ? e qual a diferença de routeros para routerboard ? 
 
 2 - qual é o site oficial da mk ? 
 
@@ -38,9 +38,7 @@
 
 4 - ative o dhcp server para cada a interface LAN ( crie o pool a sua escolha) e passe o ip do mikrotik como servidor dns primario e o do google como secundario para os clientes
 
-
 5- verifique se os hosts cliente pegou dhcp e amare o mac ao endereço.
-
 
 6 - explique as rotas no mk.
 
@@ -48,56 +46,60 @@
 
 8 - desabilite os serviços de ftp, telnet e mude a porta web para 8044.
 
+9 - crie uma resolucao de nomes estatica no dns do mikrotik para toda vez que alguem jogar ariquemes.empresa.local ele redirecione para o pci concursos.
+
+10 - Mude o nome do seu mikrotik
+
+11 - Coloque o seu mikrotik para sincronizar com os servidores de ntp a.ntp.br e b.ntp.br
+
 
 ### Parte 3 - Firewall
 
-- explique detalhadamente o que sao tables, chains e rules no mikrotik
+1 - explique detalhadamente o que sao tables, chains e rules no mikrotik
 
-- explique como funciona as chains da tabela filter ( input, foward, output )
+2 - explique como funciona as chains da tabela filter ( input, foward, output )
 
-- explique como funciona a tabela nat 
+3 - explique como funciona a tabela nat 
 
-- ative o nat para seus clientes navegarem na internet.
+4 - ative o nat para seus clientes navegarem na internet.
 
-- vc deve trabalhar com o firewall em modo DEFAULT DROP e permitir apenas o que vc quer.
+5 - vc deve trabalhar com o firewall em modo DEFAULT DROP e permitir apenas o que vc quer.
 
-- crie uma regra permitindo que as respostas passem e coloque ela no local certo e explique o motivo disso.
+6 - crie uma regra permitindo que as respostas passem e coloque ela no local certo e explique o motivo disso.
 
-- coloque os comentarios inline para ficar mais bonito a exibicao.
+7 - coloque os comentarios inline para ficar mais bonito a exibicao.
 
-- crie uma regra bloqueando o ping externo ( sera desabilitada depois )
+8 - crie uma regra bloqueando o ping externo ( sera desabilitada depois )
 
-- crie uma regra 
+9 - crie uma regra crie uma regra bloqueando ping apenas de um host da sua rede, apos validar pode desativar a regra.
 
-- crie uma regra de bloqueio para o facebook de maneira simples.
+10 - crie uma regra de bloqueio para o facebook de maneira simples.
 
-- crie 12 regras para bloqueio de sites pornos de maneira simples, use a copia das regras para ser  mais agil.
+11 - crie 12 regras para bloqueio de sites pornos de maneira simples, use a copia das regras para ser  mais agil.
 
-- 
+12 - crie uma regra que limita a quantidade de pings por segundo que o firewall pode receber na chain input
 
+13 - crie uma blacklist com enderecos da sua lan que fizerem port scan na rede e deixe esse host que fizer isso sem conexao por 10 minutos como punicao.
 
+14 - mostre como funcionam os filtros de layer 7 apenas na teoria nao precisa implementar.
 
+15 - crie uma regra de nat para permitir o acesso externo ao servidor ISS que vc vai instalar em algum pc.
 
-
-23 - faça um backup do sistema salve no seu pc.
-
-24 - reset o mk para config default e depois restaure o backup criado.
-
-25 - ping algum endereço pelo mk.
-
-26 - mostre quais os recursos mais consumidos pelo mk.
-
-29 - explique como funciona o safe mode. 
-
-30 - mostre como fazer controle de banda através das queues simples
+16 - crie alguma regra boba e ative o log com um prefixo qualquer e mostre no firewall logs o que esta acontecendo.
 
 
+### Parte 4 - Manutencao do Firewall 
 
+1 - mostre na guia profile o nivel de utilizacao dos recursos do firewall
 
+2 - mostre como fazer teste de banda entre 2 mikrotiks usando a bandwith teste
 
-##############################################################
+3 - mostre como fazer um backup do equipamento.
 
-- quais as 4 formas de acessar o mikrotik ?
-por ip, por mac, via ssh, via web
+4 - resete o equipamento para os valores de fabrica e depois restaure o backup
+
+5 - explique como funciona o safe mode. 
+
+6 - mostre como fazer controle de banda através das queues simples
 
 
