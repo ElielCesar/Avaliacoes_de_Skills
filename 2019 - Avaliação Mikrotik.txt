@@ -104,4 +104,6 @@
 
 7 - Escolha uma interface que nao esta sendo usada crie 2 vlans nela, atribua ip as vlans e ative o dhcp server em cada vlan
 
+8 - Ative o webproxy do mikrotik e configure o endereco de proxy em 2 clientes ( proxy autenticado ), bloqueie alguns sites para validar.
+
 
