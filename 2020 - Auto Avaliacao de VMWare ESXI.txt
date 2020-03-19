@@ -1,0 +1,29 @@
+
+1 - Instale o vmware workstation em sua versao de avaliacao
+
+2 - Crie uma vm esxi que sera nosso hypervisor com:
+
+  - 4 placas de rede em modo bridge
+  - 2 processadores fisicos e 2 vcpus
+  - 4 discos de 50 gigas cada
+  - 6 gigas de memoria ram
+
+3 - Realize o processo de instalacao e coloque as devidas senhas
+
+4 - Configure o endereco ip dessa vm esxi
+
+5 - acesse a interface web do esxi via notebook
+
+6 - faca o upload de uma ou 2 ISOS do seu notebook para o esxi
+
+7 - Explique as 3 guias principais do esxi ( virtual machines, storage, networking)
+
+8 - Mostre os servicos que estao em execucao diretamente no esxi
+
+9 - Mostre e explique os itens da guia performance do esxi
+
+10 - Crie um usuario eliel e o coloque como administrador
+
+11 - crie um usuario suporte e de permissao somente de visualizacao para ele.
+
+12 - Crie uma vm com windows 7 dentro do esxi e coloque um endereco ip nela.
