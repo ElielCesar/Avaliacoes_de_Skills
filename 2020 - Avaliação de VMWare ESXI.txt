@@ -29,7 +29,7 @@
 12 - Crie uma vm com windows 7 dentro do esxi e coloque um endereco ip nela.
 
 13 - Crie uma maquina virtual seguindo as melhores praticas de performance e a partir dela crie um template:
-- controladora vmware paravirtual
+- controladora vmware paravirtual + precisa do drive de disquete com a imagem para encontrar o disco
 - disco thick
-- placa de rede vmnet3
+- placa de rede vmnet3 + precisa do vmware tools para funcionar
 
