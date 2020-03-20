@@ -27,3 +27,9 @@
 11 - crie um usuario suporte e de permissao somente de visualizacao para ele.
 
 12 - Crie uma vm com windows 7 dentro do esxi e coloque um endereco ip nela.
+
+13 - Crie uma maquina virtual seguindo as melhores praticas de performance e a partir dela crie um template:
+- controladora vmware paravirtual
+- disco thick
+- placa de rede vmnet3
+
