@@ -5,7 +5,7 @@
 
   - 4 placas de rede em modo bridge
   - 2 processadores fisicos e 2 vcpus
-  - 4 discos de 50 gigas cada
+  - 3 discos de 50 gigas cada
   - 6 gigas de memoria ram
 
 3 - Realize o processo de instalacao e coloque as devidas senhas
@@ -13,6 +13,10 @@
 4 - Configure o endereco ip dessa vm esxi
 
 5 - acesse a interface web do esxi via notebook
+
+5.5 Com os discos criados anteriormente faca o seguinte:
+- crie um novo data store utilizando um dos discos
+- use o disco que sobrou para aumentar o tamanho do datastorage principal.
 
 6 - faca o upload de uma ou 2 ISOS do seu notebook para o esxi
 
