@@ -7,9 +7,9 @@
   - 3 discos de 50 gigas cada
   - 6 gigas de memoria ram
 
-3 - Realize o processo de instalacao e coloque as devidas senhas
+3 - Realize o processo de instalacao e coloque as devidas senhas, nome do host, dominio.
 
-4 - Configure o endereco ip dessa vm esxi
+4 - Configure o endereco ip dessa vm esxi de forma estatica.
 
 5 - acesse a interface web do esxi via notebook
 
