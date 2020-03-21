@@ -39,3 +39,4 @@
 
 14 - mostre como exportar uma maquina virtual pelo esxi
 
+15 - mostre como registrar e desregistrar uma vm no esxi
