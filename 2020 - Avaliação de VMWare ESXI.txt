@@ -37,3 +37,5 @@
 - disco thick
 - placa de rede vmnet3 + precisa do vmware tools para funcionar
 
+14 - mostre como exportar uma maquina virtual pelo esxi
+
