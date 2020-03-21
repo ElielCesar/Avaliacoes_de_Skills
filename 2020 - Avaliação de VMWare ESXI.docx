@@ -1,13 +1,8 @@
-Utilizando o Seguinte Layout de Rede:
-
-
-
-
 1 - Instale o vmware workstation em sua versao de avaliacao
 
 2 - Crie uma vm esxi que sera nosso hypervisor com:
 
-  - 4 placas de rede em modo bridge
+  - 3 placas de rede em modo bridge
   - 2 processadores fisicos e 2 vcpus
   - 3 discos de 50 gigas cada
   - 6 gigas de memoria ram
@@ -18,31 +13,36 @@ Utilizando o Seguinte Layout de Rede:
 
 5 - acesse a interface web do esxi via notebook
 
-5.5 Com os discos criados anteriormente faca o seguinte:
+6 Com os discos criados anteriormente faca o seguinte:
 - crie um novo data store utilizando um dos discos
 - use o disco que sobrou para aumentar o tamanho do datastorage principal.
 
-6 - faca o upload de uma ou 2 ISOS do seu notebook para o esxi
+7 - faca o upload de uma ou 2 ISOS do seu notebook para o esxi
 
-7 - Explique as 3 guias principais do esxi ( virtual machines, storage, networking)
+8 - Explique as 3 guias principais do esxi ( virtual machines, storage, networking)
 
-8 - Mostre os servicos que estao em execucao diretamente no esxi
+9 - Mostre os servicos que estao em execucao diretamente no esxi
 
-9 - Mostre e explique os itens da guia performance do esxi
+10 - Mostre e explique os itens da guia performance do esxi
 
-10 - Crie um usuario eliel e o coloque como administrador
+11 - Crie um usuario eliel e o coloque como administrador
 
-11 - crie um usuario suporte e de permissao somente de visualizacao para ele.
+12 - crie um usuario suporte e de permissao somente de visualizacao para ele.
 
-12 - Crie uma vm com windows 7 dentro do esxi e coloque um endereco ip nela.
+13 - Crie uma vm com windows 7 dentro do esxi e coloque um endereco ip nela.
 
-13 - Crie uma maquina virtual seguindo as melhores praticas de performance e a partir dela crie um template:
+OBS -> Crie uma maquina virtual seguindo as melhores praticas de performance:
 - controladora vmware paravirtual + precisa do drive de disquete com a imagem para encontrar o disco
 - disco thick
 - placa de rede vmnet3 + precisa do vmware tools para funcionar
 
-14 - mostre como exportar uma maquina virtual pelo esxi
+14 - Depois de criar essa vm com windows 7 transforme ela em um template e gere outra vm identica a partir desse template para
+os proximos passos que vc vai precisar.
 
-15 - mostre como registrar e desregistrar uma vm no esxi
+15 - Crie uma vm com windows server 2012 dentro do esxi e coloque um endereco ip nela e promova a DC.
 
+16 - Faca um snapshot desse servidor Windows após ele estar instalado e operante.
 
+17 - mostre como exportar uma maquina virtual pelo esxi
+
+18 - mostre como registrar e desregistrar uma vm no esxi.
