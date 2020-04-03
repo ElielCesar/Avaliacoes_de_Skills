@@ -53,3 +53,8 @@ o periodo de avaliacao termina ?
 
 21 - Crie uma vm com centos 7 na instalacao minimal sem interface grafica e disco de 5GB em um dos datastore e depois tente move-la 
 para um datastore diferente e veja se tal operacao é possivel sem o VCenter.
+
+22 - Futrique na parte de rede e crie novos vswitchs e segmente a rede para que maquinas linux usem um vswitch e maquinas windows usem 
+outro vswitch, faca o que for necessario incluindo todos os detalhes.
+OBS: Mesmo estando em vswitchs diferentes essas vms devem responder a ping ou outro servico que vc tentar acessar via notebook,
+a questao do vswitch é apenas para que vc aprenda a segmentar essas redes.
