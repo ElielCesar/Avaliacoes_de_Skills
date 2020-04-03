@@ -50,3 +50,6 @@ OBS -> Crie uma maquina virtual seguindo as melhores praticas de performance:
 
 20 - Como funciona detalhadamente o licenciamento do ESXI e do Vcenter ? o que acontece com o servidor ESXI e com o VCenter quando
 o periodo de avaliacao termina ?
+
+21 - Crie uma vm com centos 7 na instalacao minimal sem interface grafica e disco de 5GB em um dos datastore e depois tente move-la 
+para um datastore diferente e veja se tal operacao é possivel sem o VCenter.
