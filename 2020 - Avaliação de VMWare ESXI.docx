@@ -36,8 +36,7 @@ OBS -> Crie uma maquina virtual seguindo as melhores praticas de performance:
 - disco thick
 - placa de rede vmnet3 + precisa do vmware tools para funcionar
 
-14 - Depois de criar essa vm com windows 7 transforme ela em um template e gere outra vm identica a partir desse template para
-os proximos passos que vc vai precisar.
+14 - é possivel criar um template de uma vm sem o VCenter ?
 
 15 - Crie uma vm com windows server 2012 dentro do esxi e coloque um endereco ip nela e promova a DC.
 
@@ -46,3 +45,8 @@ os proximos passos que vc vai precisar.
 17 - mostre como exportar uma maquina virtual pelo esxi
 
 18 - mostre como registrar e desregistrar uma vm no esxi.
+
+19 - é possivel criar um servidor clonezilalla dentro do ESXI para clonar vms sem precisar instalar o VCenter ?
+
+20 - Como funciona detalhadamente o licenciamento do ESXI e do Vcenter ? o que acontece com o servidor ESXI e com o VCenter quando
+o periodo de avaliacao termina ?
