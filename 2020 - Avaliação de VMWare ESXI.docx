@@ -58,3 +58,6 @@ para um datastore diferente e veja se tal operacao é possivel sem o VCenter.
 outro vswitch, faca o que for necessario incluindo todos os detalhes.
 OBS: Mesmo estando em vswitchs diferentes essas vms devem responder a ping ou outro servico que vc tentar acessar via notebook,
 a questao do vswitch é apenas para que vc aprenda a segmentar essas redes.
+
+23 - Pegue a VM com windows 7 que vc criou e adicione 3GB a mais de tamanho NO MESMO DISCO ou seja apenas aumente o tamanho do disco que
+já esta instalado.
