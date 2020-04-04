@@ -35,10 +35,12 @@ OBS -> Crie uma maquina virtual seguindo as melhores praticas de performance:
 - controladora vmware paravirtual + precisa do drive de disquete com a imagem para encontrar o disco
 - disco thick
 - placa de rede vmnet3 + precisa do vmware tools para funcionar
+- ative o servico de IIS e teste
+- ative a area de trabalho remoto e teste
 
 14 - é possivel criar um template de uma vm sem o VCenter ?
 
-15 - Crie uma vm com windows server 2012 dentro do esxi e coloque um endereco ip nela e promova a DC.
+15 - Coloque a maquina virtual criada para iniciar junto com o ESXI ( apos o esxi iniciar é obvio ).
 
 16 - Faca um snapshot desse servidor Windows após ele estar instalado e operante.
 
