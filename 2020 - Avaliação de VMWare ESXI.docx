@@ -63,3 +63,5 @@ a questao do vswitch é apenas para que vc aprenda a segmentar essas redes.
 
 23 - Pegue a VM com windows 7 que vc criou e adicione 3GB a mais de tamanho NO MESMO DISCO ou seja apenas aumente o tamanho do disco que
 já esta instalado.
+
+24 - É possivel criar um template ou fazer um clone de uma vm pelo esxi ? 
