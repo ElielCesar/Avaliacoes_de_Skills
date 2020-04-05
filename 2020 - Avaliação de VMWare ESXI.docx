@@ -65,3 +65,6 @@ a questao do vswitch é apenas para que vc aprenda a segmentar essas redes.
 já esta instalado.
 
 24 - É possivel criar um template ou fazer um clone de uma vm pelo esxi ? 
+
+25 - Segundo o curso em ingles de VMware que vc fez pq nao é correto deixar usar um snapshot como backup e o que pode acontecer se
+vc deixar o snapshot por mais de uma semana ?
