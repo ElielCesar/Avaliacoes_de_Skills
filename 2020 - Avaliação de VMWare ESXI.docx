@@ -40,7 +40,7 @@ OBS -> Crie uma maquina virtual seguindo as melhores praticas de performance:
 
 14 - é possivel criar um template de uma vm sem o VCenter ?
 
-15 - Coloque a maquina virtual criada para iniciar junto com o ESXI ( apos o esxi iniciar é obvio ).
+15 - Coloque todas as maquinas virtuais criadas para iniciar junto com o ESXI ( apos o esxi iniciar é obvio ).
 
 16 - Faca um snapshot desse servidor Windows após ele estar instalado e operante.
 
